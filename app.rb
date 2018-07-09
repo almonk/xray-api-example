@@ -1,6 +1,5 @@
 require 'dotenv/load'
 require 'sinatra'
-require 'sinatra/reloader'
 require 'HTTParty'
 
 get '/' do
