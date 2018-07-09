@@ -1,6 +1,6 @@
 require 'dotenv/load'
 require 'sinatra'
-require 'HTTParty'
+require 'httparty'
 
 get '/' do
   response = HTTParty.get "https://xray.herokai.com/projects/everyone.json", {
