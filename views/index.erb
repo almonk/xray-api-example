@@ -8,14 +8,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <h3 class="m-4">Latest Projects from everyone</h3>
+  <h3 class="m-4">Artboards</h3>
   <ul class="list-group m-4">
-    <% @body['projects'].each do |project| %>
-      <li class="list-group-item">
-        <%= project['title'] %> by <b><%= project['username'] %></b>
-        <br>
-        <img src="<%= project['thumbnail'] %>" class="img-thumbnail" width="200">
-      </li>
+    <% @body['document']['pages'].each do |page| %>
+      <% page['artboards'].each do |artboard| %>
+        <img width="900" src="<%= "#{@body['uploads_folder']}#{@body['id']}/#{artboard['id']}.png" %>"/>
+      <% end %>
     <% end %>
   </ul>
 </body>

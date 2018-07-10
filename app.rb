@@ -8,7 +8,7 @@ end
 
 
 get '/' do
-  response = HTTParty.get "https://xray.herokai.com/projects/everyone.json", {
+  response = HTTParty.get "https://xray.herokai.com/projects/multi-cert-sso-flow.json", {
     headers: {"Authorization" => "Token #{ENV['XRAY_AUTH_TOKEN']}"}
   }
 
